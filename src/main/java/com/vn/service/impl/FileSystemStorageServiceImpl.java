@@ -23,9 +23,10 @@ public class FileSystemStorageServiceImpl implements StorageService{
 	//đường dẫn gốc để lưu thông tin file hình
 	private final Path rootLocation;
 	
-	//tạo ra file lưu trữ dựa vào id truyền vào
+	//tạo ra tên file lưu trữ dựa vào id truyền vào
 	@Override
 	public String getStoriedFileName(MultipartFile file,String id) {
+		//ext : lấy ra phần mở rộng ex : .png , .jpg
 		String ext = FilenameUtils.getExtension(file.getOriginalFilename());
 		
 		return "p" + id + "." + ext;				

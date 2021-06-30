@@ -1,8 +1,5 @@
 package com.vn.model;
 
-import java.io.Serializable;
-
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.validator.constraints.Length;
@@ -12,14 +9,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class CategoryDto implements Serializable {
-
-	private Long categoryId;
+@AllArgsConstructor
+public class AccountDto {
 	@NotEmpty
-	@Length(min = 5)
-	private String name;
+	@Length(min = 3)
+	private String username;
+	@NotEmpty
+	@Length(min = 3)
+	private String password;
 	
-	private Boolean isEdit=false;
+	private Boolean isEdit =false;
 }

@@ -10,6 +10,7 @@ import com.vn.config.StorageProperties;
 import com.vn.service.StorageService;
 
 @SpringBootApplication
+//để sử dụng các thông số cấu hình trong StorageProperties
 @EnableConfigurationProperties(StorageProperties.class)
 public class SpringJava5AssShopApplication {
 
